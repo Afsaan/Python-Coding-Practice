@@ -15,14 +15,21 @@ Output
     4 2 
 """
 
-rows = int(input("enter the number of rows"))
-column = int(input("enter the number of column"))
+rows = int(input())
+column = int(input())
 
-array=[]
-for i in range (rows):
-    for j in range (column):
-        element = int(input("enter the element"))
-        array.append(element)
-    print("\n")
+x=[]
+for i in range(rows):
+    string = input()
+    t = string.split()
+    x.append(t)
 
-print(array)
+T = [[0 for i in range(rows)]for j in range(column)] 
+for i in range(column):
+    for j in range(rows):
+        T[i][j]=x[j][i]
+        
+for i in range(column):
+    a = T[i]
+    b = " ".join(a)
+    print(b)
